@@ -3,21 +3,21 @@ import javax.swing.*;
 // MainPopup Ŭ���� (�� ȭ�� ��Ŭ�� �޴�)
 class MainPopup extends Popup {
     public MainPopup(DrawerView view) {
-        super("����");
+        super("종류");
         
-        JMenuItem pointItem = new JMenuItem("��");
+        JMenuItem pointItem = new JMenuItem("점");
         pointItem.addActionListener(e -> view.createFigure(DrawerView.DRAW_POINT));
         _popupPtr.add(pointItem);
 
-        JMenuItem lineItem = new JMenuItem("��");
+        JMenuItem lineItem = new JMenuItem("선");
         lineItem.addActionListener(e -> view.createFigure(DrawerView.DRAW_LINE));
         _popupPtr.add(lineItem);
 
-        JMenuItem boxItem = new JMenuItem("�簢��");
+        JMenuItem boxItem = new JMenuItem("사각형");
         boxItem.addActionListener(e -> view.createFigure(DrawerView.DRAW_BOX));
         _popupPtr.add(boxItem);
 
-        JMenuItem circleItem = new JMenuItem("��");
+        JMenuItem circleItem = new JMenuItem("원");
         circleItem.addActionListener(e -> view.createFigure(DrawerView.DRAW_CIRCLE));
         _popupPtr.add(circleItem);
 

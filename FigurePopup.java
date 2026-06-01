@@ -1,40 +1,40 @@
 import java.awt.*;
 import javax.swing.*;
 
-// FigurePopup Å¬·¡½º (ÀÏ¹Ý µµÇü ¿ìÅ¬¸¯ ¸Þ´º)
+// FigurePopup Å¬ï¿½ï¿½ï¿½ï¿½ (ï¿½Ï¹ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¬ï¿½ï¿½ ï¿½Þ´ï¿½)
 class FigurePopup extends Popup {
     public FigurePopup(DrawerView view, String title, boolean fillButtonFlag) {
         super(title);
 
-        JMenuItem deleteItem = new JMenuItem("Áö¿ì±â");
+        JMenuItem deleteItem = new JMenuItem("ì§€ìš°ê¸°");
         deleteItem.addActionListener(e -> view.deleteFigure());
         _popupPtr.add(deleteItem);
 
-        JMenuItem copyItem = new JMenuItem("º¹»çÇÏ±â");
+        JMenuItem copyItem = new JMenuItem("ë³µì‚¬í•˜ê¸°");
         copyItem.addActionListener(e -> view.copyFigure());
         _popupPtr.add(copyItem);
 
-        JMenu colorPopup = new JMenu("»ö Á¤ÇÏ±â");
+        JMenu colorPopup = new JMenu("ìƒ‰ìƒ ë³€ê²½");
         _popupPtr.add(colorPopup);
 
-        JMenuItem blackItem = new JMenuItem("°ËÁ¤»ö");
+        JMenuItem blackItem = new JMenuItem("ê²€ì€ìƒ‰");
         blackItem.addActionListener(e -> view.setColor(Color.black));
         colorPopup.add(blackItem);
 
-        JMenuItem redItem = new JMenuItem("»¡°£»ö");
+        JMenuItem redItem = new JMenuItem("ë¹¨ê°„ìƒ‰");
         redItem.addActionListener(e -> view.setColor(Color.red));
         colorPopup.add(redItem);
 
-        JMenuItem greenItem = new JMenuItem("ÃÊ·Ï»ö");
+        JMenuItem greenItem = new JMenuItem("ì´ˆë¡ìƒ‰");
         greenItem.addActionListener(e -> view.setColor(Color.green));
         colorPopup.add(greenItem);
 
-        JMenuItem blueItem = new JMenuItem("ÆÄ¶û»ö");
+        JMenuItem blueItem = new JMenuItem("íŒŒëž€ìƒ‰");
         blueItem.addActionListener(e -> view.setColor(Color.blue));
         colorPopup.add(blueItem);
 
         if (fillButtonFlag) {
-            JMenuItem fillItem = new JMenuItem("Ã¤¿ì±â");
+            JMenuItem fillItem = new JMenuItem("ì±„ìš°ê¸°");
             fillItem.addActionListener(e -> view.setFill());
             _popupPtr.add(fillItem);
         }

@@ -19,11 +19,11 @@ class DrawerFrame extends JFrame {
         JMenuBar menus = new JMenuBar();
         setJMenuBar(menus);
 
-        JMenu fileMenu = new JMenu("����(F)");
+        JMenu fileMenu = new JMenu("파일(F)");
         fileMenu.setMnemonic('F');
         menus.add(fileMenu);
 
-        JMenuItem newFile = new JMenuItem("�� ����(N)");
+        JMenuItem newFile = new JMenuItem("새 파일(N)");
         newFile.setMnemonic('N');
         newFile.addActionListener(e -> {
             _view.clear();
@@ -33,12 +33,12 @@ class DrawerFrame extends JFrame {
         });
         fileMenu.add(newFile);
 
-        JMenuItem openFile = new JMenuItem("����(O)");
+        JMenuItem openFile = new JMenuItem("열기(O)");
         openFile.setMnemonic('O');
         openFile.addActionListener(e -> doFileOpen());
         fileMenu.add(openFile);
 
-        JMenuItem saveFile = new JMenuItem("����(S)");
+        JMenuItem saveFile = new JMenuItem("저장(S)");
         saveFile.setMnemonic('S');
         saveFile.addActionListener(e -> {
             if (_view.getModifiedFlag() == false) return;
@@ -50,14 +50,14 @@ class DrawerFrame extends JFrame {
         });
         fileMenu.add(saveFile);
 
-        JMenuItem anotherFile = new JMenuItem("�� �̸�����(A)");
+        JMenuItem anotherFile = new JMenuItem("새 이름으로(A)");
         anotherFile.setMnemonic('A');
         anotherFile.addActionListener(e -> doFileSaveAs());
         fileMenu.add(anotherFile);
         
         fileMenu.addSeparator();
 
-        JMenuItem exit = new JMenuItem("����(X)");
+        JMenuItem exit = new JMenuItem("종료(X)");
         exit.setMnemonic('X');
         exit.addActionListener(e -> System.exit(0));
         fileMenu.add(exit);

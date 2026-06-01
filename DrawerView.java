@@ -37,10 +37,10 @@ class DrawerView extends JPanel implements MouseMotionListener {
 
         _figures = new ArrayList<Figure>();
         _mainPopup = new MainPopup(this);
-        _pointPopup = new FigurePopup(this, "Á¡", false);
-        _linePopup = new FigurePopup(this, "¼±", false);
-        _boxPopup = new FigurePopup(this, "»ç°¢Çü", true);
-        _circlePopup = new FigurePopup(this, "¿ø", true);
+        _pointPopup = new FigurePopup(this, "ì ", false);
+        _linePopup = new FigurePopup(this, "ì„ ", false);
+        _boxPopup = new FigurePopup(this, "ì‚¬ê°í˜•", true);
+        _circlePopup = new FigurePopup(this, "ì›", true);
         _tvPopup = new TVPopup(this);
 
         _selectedFigure = null;
