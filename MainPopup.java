@@ -1,24 +1,23 @@
-import java.awt.*;
 import javax.swing.*;
 
-// MainPopup Å¬·¡½º (ºó È­¸é ¿ìÅ¬¸¯ ¸Þ´º)
+// MainPopup Å¬ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ È­ï¿½ï¿½ ï¿½ï¿½Å¬ï¿½ï¿½ ï¿½Þ´ï¿½)
 class MainPopup extends Popup {
     public MainPopup(DrawerView view) {
-        super("Á¾·ù");
+        super("ï¿½ï¿½ï¿½ï¿½");
         
-        JMenuItem pointItem = new JMenuItem("Á¡");
+        JMenuItem pointItem = new JMenuItem("ï¿½ï¿½");
         pointItem.addActionListener(e -> view.createFigure(DrawerView.DRAW_POINT));
         _popupPtr.add(pointItem);
 
-        JMenuItem lineItem = new JMenuItem("¼±");
+        JMenuItem lineItem = new JMenuItem("ï¿½ï¿½");
         lineItem.addActionListener(e -> view.createFigure(DrawerView.DRAW_LINE));
         _popupPtr.add(lineItem);
 
-        JMenuItem boxItem = new JMenuItem("»ç°¢Çü");
+        JMenuItem boxItem = new JMenuItem("ï¿½ç°¢ï¿½ï¿½");
         boxItem.addActionListener(e -> view.createFigure(DrawerView.DRAW_BOX));
         _popupPtr.add(boxItem);
 
-        JMenuItem circleItem = new JMenuItem("¿ø");
+        JMenuItem circleItem = new JMenuItem("ï¿½ï¿½");
         circleItem.addActionListener(e -> view.createFigure(DrawerView.DRAW_CIRCLE));
         _popupPtr.add(circleItem);
 

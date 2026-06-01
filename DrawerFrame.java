@@ -1,5 +1,4 @@
 import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
 import java.io.*;
 import java.util.*;
@@ -20,11 +19,11 @@ class DrawerFrame extends JFrame {
         JMenuBar menus = new JMenuBar();
         setJMenuBar(menus);
 
-        JMenu fileMenu = new JMenu("ÆÄÀÏ(F)");
+        JMenu fileMenu = new JMenu("ï¿½ï¿½ï¿½ï¿½(F)");
         fileMenu.setMnemonic('F');
         menus.add(fileMenu);
 
-        JMenuItem newFile = new JMenuItem("»õ ÆÄÀÏ(N)");
+        JMenuItem newFile = new JMenuItem("ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½(N)");
         newFile.setMnemonic('N');
         newFile.addActionListener(e -> {
             _view.clear();
@@ -34,12 +33,12 @@ class DrawerFrame extends JFrame {
         });
         fileMenu.add(newFile);
 
-        JMenuItem openFile = new JMenuItem("¿­±â(O)");
+        JMenuItem openFile = new JMenuItem("ï¿½ï¿½ï¿½ï¿½(O)");
         openFile.setMnemonic('O');
         openFile.addActionListener(e -> doFileOpen());
         fileMenu.add(openFile);
 
-        JMenuItem saveFile = new JMenuItem("ÀúÀå(S)");
+        JMenuItem saveFile = new JMenuItem("ï¿½ï¿½ï¿½ï¿½(S)");
         saveFile.setMnemonic('S');
         saveFile.addActionListener(e -> {
             if (_view.getModifiedFlag() == false) return;
@@ -51,14 +50,14 @@ class DrawerFrame extends JFrame {
         });
         fileMenu.add(saveFile);
 
-        JMenuItem anotherFile = new JMenuItem("»õ ÀÌ¸§À¸·Î(A)");
+        JMenuItem anotherFile = new JMenuItem("ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ï¿½ï¿½(A)");
         anotherFile.setMnemonic('A');
         anotherFile.addActionListener(e -> doFileSaveAs());
         fileMenu.add(anotherFile);
         
         fileMenu.addSeparator();
 
-        JMenuItem exit = new JMenuItem("Á¾·á(X)");
+        JMenuItem exit = new JMenuItem("ï¿½ï¿½ï¿½ï¿½(X)");
         exit.setMnemonic('X');
         exit.addActionListener(e -> System.exit(0));
         fileMenu.add(exit);

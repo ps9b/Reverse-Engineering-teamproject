@@ -1,7 +1,6 @@
-import java.awt.*;
 import javax.swing.*;
 
-// TVPopup Å¬·¡½º (TV Àü¿ë ¿ìÅ¬¸¯ ¸Þ´º)
+// TVPopup Å¬ï¿½ï¿½ï¿½ï¿½ (TV ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Å¬ï¿½ï¿½ ï¿½Þ´ï¿½)
 class TVPopup extends FigurePopup {
     public TVPopup(DrawerView view) {
         super(view, "TV", false);
