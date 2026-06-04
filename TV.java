@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.util.ArrayList;
 
 class TV extends TwoPointFigure {
     private boolean _antennaFlag;
@@ -10,6 +11,8 @@ class TV extends TwoPointFigure {
     private Box _powerButton;
     private Line _antenna1;
     private Line _antenna2;
+
+    private ArrayList<Figure> _parts = new ArrayList<Figure>();
 
     private static int FRAME_WIDTH = 150;
     private static int FRAME_HEIGHT = 90;
@@ -27,6 +30,12 @@ class TV extends TwoPointFigure {
 
     public TV(Color color, int x, int y, boolean antennaOption) {
         super(Color.black, x, y, x + TOTAL_WIDTH, y + TOTAL_HEIGHT);
+        _parts.add(_frame);
+        _parts.add(_screen);
+        _parts.add(_channelButton);
+        _parts.add(_volumnButton);
+        _parts.add(_menuButton);
+        _parts.add(_powerButton);
         
         int x1 = x;
         int y1 = y + ANTENNA_HEIGHT;
@@ -106,26 +115,16 @@ class TV extends TwoPointFigure {
     }
 
     public void draw(Graphics g) {
-        _frame.draw(g);
-        _screen.draw(g);
-        _channelButton.draw(g);
-        _volumnButton.draw(g);
-        _menuButton.draw(g);
-        _powerButton.draw(g);
-        if (_antenna1 != null) _antenna1.draw(g);
-        if (_antenna2 != null) _antenna2.draw(g);
+        for (Figure part : _parts) {
+            part.draw(g);
+        }
     }
 
     public void move(int dx, int dy) {
         super.move(dx, dy);
-        _frame.move(dx, dy);
-        _screen.move(dx, dy);
-        _channelButton.move(dx, dy);
-        _volumnButton.move(dx, dy);
-        _menuButton.move(dx, dy);
-        _powerButton.move(dx, dy);
-        if (_antenna1 != null) _antenna1.move(dx, dy);
-        if (_antenna2 != null) _antenna2.move(dx, dy);
+        for (Figure part : _parts) {
+            part.move(dx, dy);
+        }
     }
 
     public Figure copy() {
